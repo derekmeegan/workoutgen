@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style> .btn{border:1px solid black; padding:5px;display:inline-block} </style>
+	<title>Javascript Workout Generator</title>
+</head>
+<style>
+div.a {
+	padding: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+	float: left;
+	font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+	
+
+}
+div.b {
+	margin-right: 50px;
+	padding-right : 75;
+	float : right;
+	font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+body {
+ font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  overflow: scroll;
+}
+
+a {
+	color: white;
+}
+#randWorkout {
+	font-size : 22px;
+	line-height : 35px;
+}
+#otherWorkout {
+	font-size : 22px;
+	line-height : 35px;
+}
+.column1 {
+  float: left;
+  width: 49.5%;
+  padding: 10px;
+  background-color: lightgrey;
+  height : 375px;
+
+}
+.column2{
+	float: right;
+	background-color : rgb(84, 118, 122);
+	width : 49.5%;
+	padding: 10px;
+	text-align : center; 
+	padding-top: 50px;
+	height : 375px;
+
+}
+.column3 {
+  float: left;
+  width: 49.5%;
+  padding: 10px;
+  background-color: rgb(84, 118, 122);
+  height : 375px;
+  color: white;
+
+}
+.column4{
+	float: right;
+	background-color : lightgrey;;
+	width : 49.5%;
+	padding: 10px;
+	text-align : center; 
+	padding-top: 50px;
+	height : 375px;
+	position: relative; 
+
+
+}
+.columnx {
+	width : 5px;
+	background-color : white;
+	position: relative;
+	
+}
+.rowx {
+	background-color : white;
+	height : 5px;
+	position: relative;
+	width: 50%;
+}
+.p1 {
+	color: white
+}
+.global {
+	background-color : white;
+}
+.linkedin {
+	text-align : right;
+	padding-right: 50px;
+}
+header {
+	background-color : rgb(105, 72, 96);
+	width : 100%;
+	font-family: "Roboto";
+
+}
+footer {
+	background-color : darkgrey;
+	width: 100%;
+}
+header span h1  {
+	text-align: left;
+	height : auto;
+	margin-left : 50px;
+	color: white;
+	position: relative;
+	top: 45px;
+	font-size: 36px;
+	font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+	
+}
+.radio {
+	width : 20px;
+}
+legend {
+	font-size: 15px;
+	font-weight: bold;
+}
+</style>
+<header>
+	<br><span>
+		<h1 class = "thing" >JavaScript Workout Generator 
+		</h1> 
+	
+		<div  class = "linkedin" style = "color: whitesmoke"><a href = "https://www.linkedin.com/in/derekmeegan/"></a>   
+			<a href = "https://community.mis.temple.edu/dmeegan"></a></div>	<br><br><br>
+
+				
+	</span>
+
+</header>
+<body>
+
+<div class = "global">
+
+	<div class = "rowx">
+
+	</div>
+	<div class = row>
+
+		<div class = "column1">
+			<div class = "a">
+			
+				<h1 style = "text-align : center;">Your Daily Workout!!!!!</h1> &nbsp;
+			
+			 
+				<p>Aren't <b>you</b> excited for your workout today? Just click the button and a randomly generated workout will appear
+					on the page. If two of your workouts repeat, let me know because I fixed that. Have fun! </p>
+			
+				<p><input type="button" class="btn btn-primary" id="btn_1" value="Go!"></p>
+				
+			</div>
+			
+			</div>
+			<div class="columnx">
+
+			</div>
+			<div class = "column2">
+			
+
+	
+					<div class = "p1"> <h2>You are going to do 3 sets of: </h2><br><br>
+						<div id="textDisplayed1">
+							
+							<p><b>Press Go to Begin Your Workout</b></p>							
+	
+						<br><br><br>
+					
+	
+				</div></div>
+
+			</div>
+			
+	
+	</div>
+	<div class = "rowx">
+
+	</div>
+	<div class = "row">
+
+		<div class = "column3">
+			<div class = "a">
+			
+				<h1 style = "text-align : center; color: whitesmoke;">Single Bodypart Workout</h1> &nbsp;
+			
+			 
+				<p style = "color: whitesmoke">Aren't <b>you</b> excited for your workout today? Just select a body part and click the button and a randomly generated workout tailored to your chosen body part
+					will appear on the page. Have fun! </p>
+			<div>
+				<form id="radioJawn">
+					<legend>Choose a Body Part:</legend>
+					<input type="radio" class="radio" name="radio-choice-1" id="radio-choice-1" value="armsChest" />
+					<label for="radio-choice-1">Upper Body</label>
+	   
+					<input type="radio" class="radio" name="radio-choice-1" id="radio-choice-2" value="legs"  />
+					<label for="radio-choice-2">Lower Body</label>
+	   
+					<input type="radio" class="radio" name="radio-choice-1" id="radio-choice-3" value="abs"  />
+					<label for="radio-choice-3">Abs</label>
+	   
+					<input type="radio" class="radio" name="radio-choice-1" id="radio-choice-4" value="cardio"  />
+					<label for="radio-choice-4">Cardio</label><p> </p>
+				</form>
+					
+
+					<input type="button" class="btn btn-primary" id="btn_2" value="Go!">
+			
+				
+				
+			</div>
+			
+				
+		
+			
+			
+			</div>
+			
+			</div>
+			<div class="columnx">
+			</div>
+			<div class = "column4">
+			
+				<div>
+	
+					<div> <h2>You are going to do 3 sets of: </h2><br><br>
+						<div id="textDisplayed2">
+							<p><b>Press Go to Begin Your Workout</b></p>
+						</div> 
+						<br><br><br>
+					
+	
+				</div></div>
+
+			</div>
+
+	</div>
+
+</div>
+<div class = "rowx">
+
+	</div>
+	
+		
+
+	
+</body>
+<footer>
+	<br><p style = "text-align :  center;">Copyright 2020, D. Meegan All Rights Reserved</p>&nbsp;
+</footer>
+<script src="./randWorkGen.js"></script>
+</html>
+
+
